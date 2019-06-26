@@ -8,6 +8,7 @@ var magic = 0;
 var characterStartingStats;
 
 //Objects
+//export
 function RealPlayer(strength, constitution, agility, magic) {
 
   this.strength = strength,
@@ -17,7 +18,7 @@ function RealPlayer(strength, constitution, agility, magic) {
 }
 //Character Prototypes
 RealPlayer.prototype.basePlayer = function() {
-  return this.strength.toString() + this.constitution.toString() + this.agility.toString() + this.magic.toString()
+  return this.strength + this.constitution + this.agility + this.magic
 }
 
 //Character Creation Submit
@@ -30,7 +31,19 @@ $("#createCharacter").click(function(event) {
 characterStartingStats = new RealPlayer(inputtedStrength, inputtedConstitution, inputtedAgility, inputtedMagic);
 console.log(characterStartingStats.basePlayer());
 $("#output").text(inputtedStrength + " Strength " + inputtedConstitution + " Constitution " + inputtedAgility + " Agility " + inputtedMagic + " Magic ");
-
-
+statCheck();
+console.log(statCheck);
   });
+  function statCheck() {
+    if (characterStartingStats.basePlayer() > 10){
+      alert("There is a maximum of 10 starting stat points");
+      var inputtedStrength = 0;
+      var inputtedConstitution = 0;
+      var inputtedAgility = 0;
+      var inputtedMagic = 0;
+      $("#output").text(inputtedStrength + " Strength " + inputtedConstitution + " Constitution " + inputtedAgility + " Agility " + inputtedMagic + " Magic ");
+    }
+  }
+  console.log(statCheck);
+
 });
