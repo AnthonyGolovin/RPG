@@ -1,0 +1,26 @@
+.jumbotron {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+
+}
+.card {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+body {
+  background-image: url("https://i.pinimg.com/originals/8a/10/92/8a10926e5edd4273c7b074ee6489d3e6.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+img.icon {
+  height: 50px;
+  width:  50px;
+}
+img.iconAlter {
+  height: 35px;
+  width:  35px;
+}
